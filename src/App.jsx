@@ -76,11 +76,6 @@ function App() {
   const [selectedPackageId, setSelectedPackageId] = useState(packages[0].id)
   const [activePackageId, setActivePackageId] = useState(null)
 
-  const selectedPackage = useMemo(
-    () => packages.find((travelPackage) => travelPackage.id === selectedPackageId),
-    [selectedPackageId],
-  )
-
   const activePackage = useMemo(
     () => packages.find((travelPackage) => travelPackage.id === activePackageId) ?? null,
     [activePackageId],
